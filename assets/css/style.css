@@ -8,9 +8,15 @@ h1, .jumbotron {
 .jumbotron { 
 
     background-color: red;
-    
+    background-image: url("../images/bg2.jpg");
+    background-size: 1500px 270px;
   
-  
+}
+
+#startButton { 
+    background-color: blue;
+    color: white;
+    font-size: 45px;
 
 }
 
@@ -32,29 +38,16 @@ body {
 
 #parall {
     background-color: rgb(0, 0, 0);
-    height: 700px;
+    height: 600px;
     width: 100%;
+
 }
 
-/* #introCard {
-    color: #fff;
-    font-size: 30px;
-    margin: 30px 0;
-    background-color: transparent;
-} */
 
 #introSection {
     margin-top: 40px;
 }
 
-
-/******************
-******************/
-
-
-/**********************
-    BUTTON STYLING
-***********************/
 
 #buttonRow {
     margin-top: 130px;
@@ -74,10 +67,6 @@ body {
 }
 
 
-/********************
-  QUESTIONS STYLES
-*********************/
-
 #questionSpace {
     color: #fff;
     margin-top: 40px;
@@ -93,12 +82,10 @@ body {
 }
 
 
-/********************
-*********************/
-
 #timer {
     color: #e74c3c;
     font-size: 25px;
+   
 }
 
 

@@ -2,16 +2,18 @@ $(document).ready(function() {
     $("#introSection").hide();
     $("#messageSection").hide();
     $('.tooltipped').tooltip({ 
-        delay: 1
-    });
+        delay: 1 //animate slightly
+    }); 
+    
    
 
     
-    $("#introSection").fadeIn(1000 * 2, function() { 
+    $("#introSection").fadeIn(1000 * 5, function() { 
         
     });
 
-    $("#questionSpace").hide()
+    $("#questionSpace").hide() 
+    //setting up variables for the followin:
     var correctCounter = 0,
         incorrectCounter = 0,
         unansweredCounter = 0,
@@ -48,15 +50,15 @@ $(document).ready(function() {
             } else {
                 i--;
             }
-        }, 1000);
+        }, 2000);
     }
 
     var questions = [
-        // Q1
+        // Q1 == total of 10 questions will be asked. the answer choices are 
         {
             "q": "Captain America’s shield is made of?",
-            "c": ["vibranium", "adamantium", "kryptonite"],
-            "answer": 0
+            "c": ["Vibranium", "Adamantium", "Kryptonite"], //using array for # of possible answers.
+            "answer": 0 
         },
         // Q2
         {
@@ -103,7 +105,7 @@ $(document).ready(function() {
         // Q9
         {
             "q": "What was Dr. Strange’s profession before he became Sorcerer Supreme?",
-            "c": ["professor", "dermatologist", "neurosurgeon"],
+            "c": ["Professor", "Dermatologist", "Neurosurgeon"],
             "answer": 2
         },
         // Q10
@@ -137,7 +139,7 @@ $(document).ready(function() {
             var userChoice = $(this).attr('indexnum'); 
             userChoice = parseInt(userChoice);
 
-            
+            //if/else statements to keep track of right, wrong questions.
             if (userChoice === questions[currentQuestionIndex].answer) {
                 correctCounter++;
                 currentQuestionIndex++
@@ -178,7 +180,7 @@ $(document).ready(function() {
         $('#gameMessage').append("<h5>Total Incorrect: " + incorrectCounter + "</h5>");
         $('#gameMessage').append("<h5>Total Unanswered: " + unansweredCounter + "</h5>");
 
-        setTimeout(startTrivia, 1000 * 10);
+        setTimeout(startTrivia, 1000 * 3); //pause for 3 second before the next round begins
 
     }
 
